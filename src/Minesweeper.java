@@ -144,14 +144,14 @@ public class Minesweeper {
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
 
         System.out.println("Welcome to Console Minesweeper (Google Style)");
         System.out.print("Enter board size (rows cols): ");
-        int rows = scanner.nextInt();
-        int cols = scanner.nextInt();
+        int rows = in.nextInt();
+        int cols = in.nextInt();
         System.out.print("Enter number of mines: ");
-        int numMines = scanner.nextInt();
+        int numMines = in.nextInt();
         System.out.println();
 
         Minesweeper game = new Minesweeper(rows, cols, numMines);
@@ -160,9 +160,9 @@ public class Minesweeper {
 
         while (true) {
             System.out.print("Enter move (reveal/flag/unflag row col): ");
-            String command = scanner.next();
-            int row = scanner.nextInt();
-            int col = scanner.nextInt();
+            String command = in.next();
+            int row = in.nextInt();
+            int col = in.nextInt();
 
             switch (command.toLowerCase().charAt(0)) {
                 case 'r':
